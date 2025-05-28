@@ -55,7 +55,7 @@ export default function Home() {
         {/* Update sections with proper IDs */}
         <section
           id="hero"
-          className="relative w-full py-16 md:py-24 lg:py-32 bg-gray-50 overflow-hidden"
+          className="relative w-full py-4 md:py-24 lg:py-32 bg-gray-50 overflow-hidden"
         >
           {/* Plano de fundo com padrão e formas */}
           <div className="absolute inset-0 z-0">
@@ -64,7 +64,7 @@ export default function Home() {
             <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-red-50 rounded-tr-[100px] opacity-70"></div>
           </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative z-10 max-w-7xl mx-auto px-1 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               {/* Coluna de texto */}
               <div className="flex flex-col items-start text-left space-y-4 max-w-xl mx-auto sm:mx-0">
@@ -274,7 +274,7 @@ export default function Home() {
         </section>
 
         <section id="contato" className="w-full py-20 bg-black">
-          <div className="container px-4 md:px-6">
+          <div className="container px-1 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center max-w-5xl mx-auto">
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
@@ -341,7 +341,7 @@ export default function Home() {
 
         {/* Update footer contact information */}
         <footer className="w-full border-t border-gray-200 bg-gray-50 py-12 text-gray-700">
-          <div className="container px-4 md:px-6">
+          <div className="container px-1 md:px-6">
             <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
               <div className="space-y-4">
                 <div className="flex items-center gap-2 font-bold text-2xl">

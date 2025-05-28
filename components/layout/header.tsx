@@ -18,7 +18,8 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="container px-4 md:px-6">
+      {/* Troquei container por div full width com padding */}
+      <div className="w-full px-4 md:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
             <Image
@@ -71,7 +72,7 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-100">
+          <div className="md:hidden py-2 border-t border-gray-100">
             <nav className="flex flex-col space-y-4">
               {[
                 { href: "#clientes", label: "Clientes" },
@@ -82,7 +83,7 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-sm font-medium text-gray-600 hover:text-red-600 transition-all duration-300 px-4 py-2"
+                  className="text-sm font-medium text-gray-600 hover:text-red-600 transition-all duration-300 px-1 py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

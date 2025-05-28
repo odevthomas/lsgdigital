@@ -4,7 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "..
 
 export function SEOFaq() {
   return (
-    <section id="faq" className="w-full py-12 md:py-16 bg-gray-50">
+    <section id="faq" className="w-full py-12 md:py-2 bg-gray-50">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2 max-w-3xl">

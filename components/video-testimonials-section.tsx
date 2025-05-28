@@ -76,7 +76,7 @@ export function VideoTestimonialsSection() {
   }
 
   return (
-    <section id="video-depoimentos" className="w-full py-12 md:py-24 bg-gray-50">
+    <section id="video-depoimentos" className="w-full py-2 md:py-4 bg-gray-50">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-600 font-medium">
