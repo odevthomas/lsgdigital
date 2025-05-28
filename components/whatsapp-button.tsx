@@ -4,22 +4,20 @@ import { useState, useEffect } from "react"
 
 export function WhatsAppButton() {
   const [isVisible, setIsVisible] = useState(true)
-  const [lastScrollY, setLastScrollY] = useState(0)
   const [isBlinking, setIsBlinking] = useState(true)
 
   useEffect(() => {
-    const controlButton = () => {
-      if (window.scrollY > lastScrollY && window.scrollY > 300) {
-        setIsVisible(false)
-      } else {
-        setIsVisible(true)
-      }
-      setLastScrollY(window.scrollY)
+    let lastScrollY = window.scrollY
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      setIsVisible(currentScrollY < lastScrollY || currentScrollY < 300)
+      lastScrollY = currentScrollY
     }
 
-    window.addEventListener("scroll", controlButton)
-    return () => window.removeEventListener("scroll", controlButton)
-  }, [lastScrollY])
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   useEffect(() => {
     const blinkInterval = setInterval(() => {
@@ -35,7 +33,7 @@ export function WhatsAppButton() {
         isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
       }`}
     >
-      {/* Decorações: não interferem no clique */}
+      {/* Decorações visuais */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="rounded-full bg-green-500 opacity-30 animate-ping w-full h-full"></div>
         <div className="rounded-full bg-green-500 opacity-20 animate-pulse w-full h-full absolute top-0 left-0"></div>
@@ -50,7 +48,7 @@ export function WhatsAppButton() {
         Online Agora
       </div>
 
-      {/* Botão principal */}
+      {/* Botão WhatsApp */}
       <a
         href="https://wa.me/5519981331191?text=Olá,%20gostaria%20de%20consultar%20um%20especialista%20da%20LSG%20Digital"
         target="_blank"

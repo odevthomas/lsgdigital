@@ -2,8 +2,8 @@ import "@/app/globals.css"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
-import type { Metadata } from "next"
-import { WhatsAppButton } from "@/components/whatsapp-button"
+import type { Metadata } from "next/types"
+import { WhatsAppWrapper } from "@/components/WhatsAppWrapper" // novo wrapper
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -53,26 +53,29 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google-site-verification-code",
+    google: "YOUR_GOOGLE_SITE_VERIFICATION_CODE", // Substitua pelo real
   },
   generator: "LSG Digital",
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <link rel="icon" href="/lsglogo.jpeg" sizes="any" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
         <meta name="theme-color" content="#e11d48" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-gray-50`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          {children}
-          <WhatsAppButton />
+          <div className="px-4 sm:px-6 md:px-8 lg:px-16">
+            {children}
+          </div>
+          <WhatsAppWrapper />
         </ThemeProvider>
+
         {/* Google Tag Manager */}
         <Script id="gtm" strategy="afterInteractive">
           {`
@@ -83,6 +86,7 @@ export default function RootLayout({ children }) {
             })(window,document,'script','dataLayer','GTM-XXXXXXX');
           `}
         </Script>
+
         {/* Structured Data - Organization */}
         <Script
           id="structured-data-organization"
@@ -93,7 +97,7 @@ export default function RootLayout({ children }) {
               "@type": "Organization",
               name: "LSG Digital",
               url: "https://lsgdigital.com.br",
-              logo: "https://lsgdigital.com.br/logo.png",
+              logo: "https://lsgdigital.com.br/lsglogo.jpeg",
               description:
                 "Redefinimos o que significa crescer com marketing no Brasil. Tráfego pago com controle, previsibilidade e excelência técnica. Método PRISMA™ exclusivo.",
               address: {
@@ -102,8 +106,8 @@ export default function RootLayout({ children }) {
                 addressRegion: "SP",
                 addressCountry: "BR",
               },
-              telephone: "+55-00-00000000",
-              email: "contato@lsgdigital.com.br",
+              telephone: "+55 19 98133-1191",
+              email: "comercial@lsgdigital.com.br",
               sameAs: [
                 "https://www.facebook.com/lsgdigital",
                 "https://www.instagram.com/lsgdigital",
@@ -113,90 +117,7 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
-        {/* Structured Data - LocalBusiness */}
-        <Script
-          id="structured-data-localbusiness"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ProfessionalService",
-              name: "LSG Digital",
-              image: "https://lsgdigital.com.br/logo.png",
-              url: "https://lsgdigital.com.br",
-              telephone: "+55-00-00000000",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "Endereço da LSG Digital",
-                addressLocality: "São Paulo",
-                addressRegion: "SP",
-                postalCode: "00000-000",
-                addressCountry: "BR",
-              },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: -23.5505,
-                longitude: -46.6333,
-              },
-              openingHoursSpecification: {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                opens: "09:00",
-                closes: "18:00",
-              },
-              priceRange: "$$",
-            }),
-          }}
-        />
-        {/* Structured Data - Service */}
-        <Script
-          id="structured-data-service"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Service",
-              serviceType: "Marketing Digital",
-              provider: {
-                "@type": "Organization",
-                name: "LSG Digital",
-                url: "https://lsgdigital.com.br",
-              },
-              description: "Engenharia de crescimento com tráfego pago. Método PRISMA™ exclusivo para maximizar ROI.",
-              areaServed: {
-                "@type": "Country",
-                name: "Brasil",
-              },
-              hasOfferCatalog: {
-                "@type": "OfferCatalog",
-                name: "Serviços de Marketing Digital",
-                itemListElement: [
-                  {
-                    "@type": "Offer",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Tráfego Pago",
-                    },
-                  },
-                  {
-                    "@type": "Offer",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Automação de Marketing",
-                    },
-                  },
-                  {
-                    "@type": "Offer",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Diagnóstico Estratégico",
-                    },
-                  },
-                ],
-              },
-            }),
-          }}
-        />
+
         {/* Structured Data - FAQ */}
         <Script
           id="structured-data-faq"
@@ -211,7 +132,7 @@ export default function RootLayout({ children }) {
                   name: "O que é o Método PRISMA™?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "O Método PRISMA™ é nossa metodologia proprietária em 7 etapas que inclui diagnóstico estratégico profundo, desenho de funil com intenção comercial, setup técnico, campanhas com foco em ROI, otimização diária, relatórios executivos e escalonamento validado.",
+                    text: "O Método PRISMA™ é nossa metodologia proprietária em 7 etapas, que combina análise de dados, criação de criativos, otimização de funil e automação para maximizar seu ROI.",
                   },
                 },
                 {
@@ -219,69 +140,8 @@ export default function RootLayout({ children }) {
                   name: "Quanto tempo leva para ver resultados?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Os primeiros resultados começam a aparecer entre 30 a 60 dias, dependendo do seu mercado e da maturidade digital do seu negócio. Nosso foco é em resultados sustentáveis e escaláveis, não em picos temporários de performance.",
+                    text: "Os primeiros resultados começam a aparecer entre 30 a 60 dias, dependendo do mercado e investimento em mídia.",
                   },
-                },
-                {
-                  "@type": "Question",
-                  name: "Quais mercados a LSG Digital atende?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Atendemos principalmente serviços premium com marca pessoal, educação privada, resorts e clínicas com ticket alto, tecnologia sob demanda e beleza e moda com posicionamento forte. O que define nosso cliente ideal é visão de crescimento e compromisso com estrutura.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Como a LSG Digital se diferencia de outras agências de marketing?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Diferente de agências tradicionais, não tratamos tráfego como commodity. Somos engenheiros de crescimento com foco em ROI, realizamos diagnóstico profundo antes de qualquer execução, e oferecemos atendimento técnico sem terceirização. Nossa abordagem é personalizada para cada cliente, com foco em métricas que realmente impactam o negócio.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Qual é o investimento mínimo para trabalhar com a LSG Digital?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "O investimento varia conforme as necessidades específicas do seu negócio e objetivos de crescimento. Trabalhamos com empresas que valorizam resultados de longo prazo e entendem marketing como investimento estratégico. Para receber uma proposta personalizada, entre em contato conosco para um diagnóstico gratuito.",
-                  },
-                },
-              ],
-            }),
-          }}
-        />
-        {/* Structured Data - BreadcrumbList */}
-        <Script
-          id="structured-data-breadcrumb"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://lsgdigital.com.br",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Metodologia",
-                  item: "https://lsgdigital.com.br/#metodologia",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Depoimentos",
-                  item: "https://lsgdigital.com.br/#video-depoimentos",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 4,
-                  name: "Contato",
-                  item: "https://lsgdigital.com.br/#contato",
                 },
               ],
             }),

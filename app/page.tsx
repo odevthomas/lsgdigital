@@ -20,7 +20,7 @@ import { MethodologySection } from "../components/methodology-section";
 import { DifferentialsSection } from "../components/differentials-section";
 import { SEOFaq } from "../components/seo-faq";
 import { ContatoForm } from "../components/contato-form";
-// import { enviarMensagem } from "../actions/enviarMensagem";
+import { ActionButtons } from "@/components/action-buttons";
 
 export const metadata: Metadata = {
   title: "LSG Digital | Engenharia de Crescimento com Tráfego Pago | ROI Real",
@@ -53,7 +53,10 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         {/* Update sections with proper IDs */}
-        <section id="hero" className="relative w-full py-16 md:py-24 lg:py-32 bg-gray-50 overflow-hidden">
+        <section
+          id="hero"
+          className="relative w-full py-16 md:py-24 lg:py-32 bg-gray-50 overflow-hidden"
+        >
           {/* Plano de fundo com padrão e formas */}
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-[url('/subtle-pattern.png')] bg-repeat opacity-5"></div>
@@ -64,7 +67,6 @@ export default function Home() {
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               {/* Coluna de texto */}
-
               <div className="flex flex-col items-start text-left space-y-4 max-w-xl mx-auto sm:mx-0">
                 <div className="inline-flex items-center px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-700 text-sm font-medium">
                   <Zap className="h-4 w-4 mr-2 text-red-600" />
@@ -90,7 +92,8 @@ export default function Home() {
                     size="lg"
                     className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-medium h-12 px-6 rounded-md transition"
                   >
-                    Solicitar Diagnóstico Gratuito
+                    SOLICITAR DIAGNÓSTICO GRATUITO
+
                     <ArrowRight className="h-4 w-4" />
                   </Button>
 
@@ -98,20 +101,11 @@ export default function Home() {
                     size="lg"
                     variant="outline"
                     className="border-red-200 text-red-600 hover:bg-red-50 text-lg font-medium h-12 px-6 rounded-md"
-                    as="a"
-                    href="#video-depoimentos" // Corrigido aqui
+                    asChild
                   >
-                    VER DEPOIMENTOS
+                    <a href="#video-depoimentos">VER DEPOIMENTOS</a>
                   </Button>
                 </div>
-
-                <Link
-                  href="#saiba-mais"
-                  className="group inline-flex items-center gap-1 text-red-600 hover:text-red-700"
-                >
-                  Saiba mais
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
               </div>
 
               {/* Coluna do gráfico animado */}
@@ -279,7 +273,7 @@ export default function Home() {
           {/* 6. Página Por Que Escolher a LSG Digital */}
         </section>
 
-        <section id="contato" className="w-full py-20 bg-white">
+        <section id="contato" className="w-full py-20 bg-black">
           <div className="container px-4 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center max-w-5xl mx-auto">
               <div className="flex flex-col justify-center space-y-6">
@@ -287,7 +281,7 @@ export default function Home() {
                   <div className="inline-flex items-center px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-700 text-sm font-medium mb-2">
                     Diagnóstico Gratuito
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-gray-900">
+                  <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-gray-100">
                     Pronto para transformar tráfego em centro de lucro?
                   </h2>
                   <p className="text-xl text-gray-600">

@@ -13,6 +13,9 @@ export function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const whatsappLink =
+    "https://wa.me/551999042072?text=Olá!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20LSG%20Digital";
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container px-4 md:px-6">
@@ -45,7 +48,9 @@ export function Header() {
             ))}
             <Button
               as="a"
-              href="#contato"
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
               variant="default"
               size="sm"
               className="transition-all duration-300 hover:scale-105"
@@ -85,7 +90,9 @@ export function Header() {
               ))}
               <Button
                 as="a"
-                href="#contato"
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 variant="default"
                 size="sm"
                 className="mx-4 bg-gray-900 hover:bg-red-600 transition-all duration-300"
@@ -100,4 +107,5 @@ export function Header() {
     </header>
   );
 }
+
 export default Header;
