@@ -3,7 +3,7 @@ import { Building, GraduationCap, Hotel, Smartphone, Sparkles } from "lucide-rea
 export function TargetMarketsSection() {
   return (
     <section id="mercados" className="w-full py-12 md:py-24 bg-gray-50">
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <div className="inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-600 font-medium">
@@ -14,7 +14,9 @@ export function TargetMarketsSection() {
               Especialistas em mercados que valorizam qualidade, posicionamento e resultados
             </p>
           </div>
-          <div className="mx-auto grid max-w-5xl gap-6 md:gap-8 lg:grid-cols-3 mt-8">
+
+          {/* Ajuste na grid para ser responsiva */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-8 mx-auto max-w-7xl">
             <div className="flex flex-col items-center space-y-4 rounded-lg border p-6 shadow-sm bg-white">
               <div className="rounded-full bg-red-100 p-3">
                 <Building className="h-6 w-6 text-red-600" />
@@ -28,6 +30,7 @@ export function TargetMarketsSection() {
               </div>
               <p className="text-sm text-gray-500">Especialidade: 90%</p>
             </div>
+
             <div className="flex flex-col items-center space-y-4 rounded-lg border p-6 shadow-sm bg-white">
               <div className="rounded-full bg-red-100 p-3">
                 <GraduationCap className="h-6 w-6 text-red-600" />
@@ -41,6 +44,7 @@ export function TargetMarketsSection() {
               </div>
               <p className="text-sm text-gray-500">Especialidade: 85%</p>
             </div>
+
             <div className="flex flex-col items-center space-y-4 rounded-lg border p-6 shadow-sm bg-white">
               <div className="rounded-full bg-red-100 p-3">
                 <Hotel className="h-6 w-6 text-red-600" />
@@ -54,6 +58,7 @@ export function TargetMarketsSection() {
               </div>
               <p className="text-sm text-gray-500">Especialidade: 95%</p>
             </div>
+
             <div className="flex flex-col items-center space-y-4 rounded-lg border p-6 shadow-sm bg-white">
               <div className="rounded-full bg-red-100 p-3">
                 <Smartphone className="h-6 w-6 text-red-600" />
@@ -67,6 +72,7 @@ export function TargetMarketsSection() {
               </div>
               <p className="text-sm text-gray-500">Especialidade: 80%</p>
             </div>
+
             <div className="flex flex-col items-center space-y-4 rounded-lg border p-6 shadow-sm bg-white">
               <div className="rounded-full bg-red-100 p-3">
                 <Sparkles className="h-6 w-6 text-red-600" />
@@ -80,6 +86,7 @@ export function TargetMarketsSection() {
               </div>
               <p className="text-sm text-gray-500">Especialidade: 85%</p>
             </div>
+
             <div className="flex flex-col items-center space-y-4 rounded-lg border p-6 shadow-sm bg-white">
               <div className="rounded-full bg-red-100 p-3">
                 <svg
@@ -110,6 +117,8 @@ export function TargetMarketsSection() {
               <p className="text-sm text-gray-500">Especialidade: 75%</p>
             </div>
           </div>
+
+          {/* Frase de fechamento */}
           <p className="mt-8 text-lg text-gray-500">
             O que define nosso cliente ideal é visão de crescimento e compromisso com estrutura.
           </p>

@@ -1,4 +1,6 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+"use client"
+
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../components/ui/accordion"
 
 export function SEOFaq() {
   return (
@@ -15,10 +17,14 @@ export function SEOFaq() {
             </p>
           </div>
 
+          {/* Accordion Container */}
           <div className="w-full max-w-3xl mt-8">
             <Accordion type="single" collapsible className="w-full">
+              {/* Accordion Item 1 */}
               <AccordionItem value="item-1">
-                <AccordionTrigger className="text-left text-lg font-medium">O que é o Método PRISMA™?</AccordionTrigger>
+                <AccordionTrigger className="text-left text-lg font-medium">
+                  O que é o Método PRISMA™?
+                </AccordionTrigger>
                 <AccordionContent className="text-gray-600">
                   O Método PRISMA™ é nossa metodologia proprietária em 7 etapas que inclui diagnóstico estratégico
                   profundo, desenho de funil com intenção comercial, setup técnico, campanhas com foco em ROI,
@@ -27,6 +33,7 @@ export function SEOFaq() {
                 </AccordionContent>
               </AccordionItem>
 
+              {/* Accordion Item 2 */}
               <AccordionItem value="item-2">
                 <AccordionTrigger className="text-left text-lg font-medium">
                   Quanto tempo leva para ver resultados?
@@ -39,6 +46,7 @@ export function SEOFaq() {
                 </AccordionContent>
               </AccordionItem>
 
+              {/* Accordion Item 3 */}
               <AccordionItem value="item-3">
                 <AccordionTrigger className="text-left text-lg font-medium">
                   Quais mercados a LSG Digital atende?
@@ -51,6 +59,7 @@ export function SEOFaq() {
                 </AccordionContent>
               </AccordionItem>
 
+              {/* Accordion Item 4 */}
               <AccordionItem value="item-4">
                 <AccordionTrigger className="text-left text-lg font-medium">
                   Como a LSG Digital se diferencia de outras agências de marketing?
@@ -64,6 +73,7 @@ export function SEOFaq() {
                 </AccordionContent>
               </AccordionItem>
 
+              {/* Accordion Item 5 */}
               <AccordionItem value="item-5">
                 <AccordionTrigger className="text-left text-lg font-medium">
                   Qual é o investimento mínimo para trabalhar com a LSG Digital?

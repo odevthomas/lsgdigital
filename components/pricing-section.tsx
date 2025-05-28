@@ -1,5 +1,7 @@
+"use client"
+
 import { CheckCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "../components/ui/button"
 
 export function PricingSection() {
   return (
@@ -16,7 +18,7 @@ export function PricingSection() {
               crítica de performance
             </p>
           </div>
-          <div className="mx-auto grid max-w-5xl gap-6 md:gap-8 lg:grid-cols-3 mt-8">
+          <div className="mx-auto grid gap-6 md:gap-8 mt-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-full md:max-w-6xl">
             {/* Plano Estrutura */}
             <div className="flex flex-col rounded-lg border bg-white p-6 shadow-sm">
               <div className="space-y-2">
@@ -80,7 +82,7 @@ export function PricingSection() {
                 </ul>
               </div>
               <div className="mt-auto pt-6">
-                <Button className="w-full bg-green-600 hover:bg-green-700" as="a" href="#contato">
+                <Button className="w-full bg-red-600 hover:bg-red-700" as="a" href="#contato">
                   Solicitar Proposta
                 </Button>
               </div>
