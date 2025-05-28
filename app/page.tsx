@@ -274,11 +274,11 @@ export default function Home() {
         </section>
 
         <section id="contato" className="w-full py-20 bg-black">
-          <div className="container px-1 md:px-6">
+          <div className=" px-1 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center max-w-5xl mx-auto">
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-700 text-sm font-medium mb-2">
+                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-00 text-sm font-medium mb-2">
                     Diagnóstico Gratuito
                   </div>
                   <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-gray-100">
@@ -293,25 +293,25 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span className="text-lg text-gray-700">
+                    <span className="text-lg text-gray-200">
                       Diagnóstico personalizado do seu negócio
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span className="text-lg text-gray-700">
+                    <span className="text-lg text-gray-200">
                       Estratégias sob medida para seu mercado
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span className="text-lg text-gray-700">
+                    <span className="text-lg text-gray-200">
                       Resultados mensuráveis e transparentes
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span className="text-lg text-gray-700">
+                    <span className="text-lg text-gray-200">
                       Foco total em ROI e crescimento sustentável
                     </span>
                   </div>
@@ -341,7 +341,7 @@ export default function Home() {
 
         {/* Update footer contact information */}
         <footer className="w-full border-t border-gray-200 bg-gray-50 py-12 text-gray-700">
-          <div className="container px-1 md:px-6">
+          <div className=" px-1 md:px-6">
             <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
               <div className="space-y-4">
                 <div className="flex items-center gap-2 font-bold text-2xl">

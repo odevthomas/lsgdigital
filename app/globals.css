@@ -6,14 +6,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
 @layer base {
   :root {
+    /* Cores claras */
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
@@ -39,6 +34,8 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+
+    /* Sidebar */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -48,7 +45,9 @@ body {
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
   .dark {
+    /* Cores escuras */
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
@@ -86,9 +85,64 @@ body {
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border box-border;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased leading-relaxed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-balance text-gray-900 dark:text-white;
+  }
+
+  a {
+    @apply text-primary hover:underline hover:text-red-600 transition-all;
+  }
+
+  button {
+    @apply transition-colors duration-300 ease-in-out rounded-md;
+  }
+
+  img {
+    @apply max-w-full h-auto;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Espaçamentos responsivos */
+  .responsive-padding {
+    @apply px-4 sm:px-6 md:px-8 lg:px-16;
+  }
+
+  .responsive-section {
+    @apply py-6 sm:py-8 md:py-10 lg:py-12;
+  }
+
+  /* Container centralizado responsivo */
+  .container-center {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Utilitários de card */
+  .card {
+    @apply rounded-xl border bg-card text-card-foreground shadow-sm p-4;
+  }
+
+  .card-hover {
+    @apply hover:shadow-md transition-shadow duration-300;
+  }
+
+  /* Botão com destaque */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-red-600 px-4 py-2 text-white hover:bg-red-700;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary hover:bg-primary hover:text-white transition;
   }
 }

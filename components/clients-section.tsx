@@ -150,7 +150,7 @@ export function ClientsSection() {
 
   return (
    <section id="clientes" className="w-full py-2 md:py-20 bg-black from-white to-gray-50">
-  <div className="px-4 md:px-6 mx-auto flex flex-col items-center">
+  <div className="px-2 sm:px-2 sm:px-4 lg:px-8 md:px-6 lg:px-8 mx-auto flex flex-col items-center">
     <div className="text-center space-y-4">
       <span className="inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-600 font-medium">
         Clientes de Sucesso

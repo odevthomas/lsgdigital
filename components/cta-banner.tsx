@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react"
 
 export function CTABanner() {
   return (
-    <section className="w-full py-2 md:py-24 bg-red-600 text-white">
+    <section className="w-full px-2 sm:px-4 md:px-6 lg:px-8 bg-red-600 text-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center space-y-8">
           {/* Título e descrição */}
