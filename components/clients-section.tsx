@@ -187,17 +187,17 @@ export function ClientsSection() {
   return (
    <section id="clientes" className="w-full py-2 md:py-20 bg-black from-white to-gray-50">
   <div className="px-2 sm:px-2 sm:px-4 lg:px-8 md:px-6 lg:px-8 mx-auto flex flex-col items-center">
-    <div className="text-center space-y-4">
-      <span className="inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-600 font-medium">
-        Clientes de Sucesso
-      </span>
-      <h2 className="text-3xl text-white font-bold tracking-tighter md:text-4xl">
-        Grandes Marcas Confiam na LSG Digital
-      </h2>
-      <p className="max-w-[900px] text-gray-500 text-white md:text-xl/relaxed">
-        Empresas líderes em seus segmentos que escolheram nossa engenharia de crescimento
-      </p>
-    </div>
+   <div className="space-y-4 max-w-3xl mx-auto text-center">
+  <span className="inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-600 font-medium">
+    Clientes de Sucesso
+  </span>
+  <h2 className="text-3xl text-white font-bold tracking-tighter md:text-4xl">
+    Empresas Líderes Confiam na LSG Digital para Crescer com Performance Real
+  </h2>
+  <p className="text-gray-300 md:text-xl/relaxed">
+    Marcas de destaque em seus setores escolhem a LSG Digital por nossa engenharia de tráfego pago, estratégia de autoridade e geração de resultados escaláveis.
+  </p>
+</div>
 
     {/* Carrossel */}
     <div className="w-full max-w-6xl mt-8 relative flex justify-center items-center">
