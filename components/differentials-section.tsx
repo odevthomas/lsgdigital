@@ -19,17 +19,18 @@ export function DifferentialsSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-center text-center space-y-8">
           {/* Título e descrição */}
-          <div className="space-y-4 max-w-3xl">
-            <span className="inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-600 font-medium">
-              Diferenciais Operacionais
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight">
-              Por Que Escolher a LSG Digital
-            </h2>
-            <p className="text-gray-500 text-base sm:text-lg md:text-xl">
-              Nossa abordagem única combina estratégia, execução e análise para resultados reais.
-            </p>
-          </div>
+      
+        <div className="space-y-4 max-w-3xl">
+  <span className="inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-600 font-medium">
+    Diferenciais Operacionais
+  </span>
+<h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+    Por que a LSG Digital é a parceira certa para seu crescimento digital?
+  </h2>
+  <p className="text-gray-500 text-base sm:text-lg md:text-xl">
+    Combinamos planejamento estratégico, operação de tráfego pago e análise de performance para transformar sua verba de marketing em vendas mensuráveis.
+  </p>
+</div>
 
           {/* Cards em grid responsivo */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 w-full max-w-6xl">

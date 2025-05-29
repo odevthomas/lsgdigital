@@ -68,23 +68,19 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               {/* Coluna de texto */}
               <div className="flex flex-col items-start text-left space-y-4 max-w-xl mx-auto sm:mx-0">
-                <div className="inline-flex items-center px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-700 text-sm font-medium">
-                  <Zap className="h-4 w-4 mr-2 text-red-600" />
-                  Engenharia de Crescimento com Tráfego Pago
-                </div>
+               <div className="inline-flex items-center px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-700 text-sm font-medium">
+  <Zap className="h-4 w-4 mr-2 text-red-600" />
+  Engenharia de Crescimento com Tráfego Pago
+</div>
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight">
-                  Seu <span className="text-red-600">TRÁFEGO PAGO</span> não
-                  deveria ser um <span className="text-red-600">CUSTO</span>.
-                  Deveria ser o <span className="text-red-600">MOTOR</span> das{" "}
-                  <span className="text-red-600">SUAS VENDAS</span>.
-                </h1>
+<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight">
+  Empresas Líderes Confiam na <span className="text-red-600">LSG Digital</span> para Crescer com <span className="text-red-600">Performance Real</span>
+</h1>
 
-                <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-full">
-                  Não operamos campanhas. Construímos sistemas de crescimento.
-                  Com método, leitura de negócio e foco total no seu ROI,
-                  criamos a engrenagem que transforma cliques em vendas.
-                </p>
+<p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-full">
+  Marcas de destaque em seus setores escolhem a LSG Digital por nossa engenharia de tráfego pago, estratégia de autoridade e geração de resultados escaláveis.
+</p>
+
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-start w-full">
                   <Button
@@ -284,7 +280,7 @@ export default function Home() {
                   <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-gray-100">
                     Pronto para transformar tráfego em centro de lucro?
                   </h2>
-                  <p className="text-xl text-gray-600">
+                  <p className="text-xl text-gray-300">
                     Solicite um diagnóstico estratégico gratuito e descubra como
                     podemos ajudar seu negócio a crescer com previsibilidade e
                     controle.

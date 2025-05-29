@@ -115,6 +115,42 @@ export function ClientsSection() {
       imageUrl: "/clients/we-beauty.jpg",
       description: "Marketing para estética",
     },
+    {
+      name: "Pedro Salles",
+      instagram: "https://www.instagram.com/opedro.sallles/",
+      imageUrl: "/clients/pedro-salles.jpg",
+      description: "Influenciador de Investimentos",
+    },
+    {
+      name: "In Beauty",
+      instagram: "https://www.instagram.com/inbeautyluxury/",
+      imageUrl: "/clients/in-beauty.jpg",
+      description: "Salão de Beleza",
+    },
+    {
+      name: "CasaVr",
+      instagram: "https://www.instagram.com/casavrsalao/",
+      imageUrl: "/clients/casavr.jpg",
+      description: "Salão de Beleza",
+    },
+    {
+      name: "Borelli",
+      instagram: "https://www.instagram.com/borelli_estetica_bemestar/",
+      imageUrl: "/clients/borelli.jpg",
+      description: "Clínica de Massagens",
+    },
+    {
+      name: "OAK Studio",
+      instagram: "https://www.instagram.com/oakstudiocambui/",
+      imageUrl: "/clients/oak-studio.jpg",
+      description: "Salão de Beleza",
+    },
+    {
+      name: "AmoVacinas",
+      instagram: "https://www.instagram.com/amovacinasoficial/",
+      imageUrl: "/clients/amovacinas.jpg",
+      description: "Clínica de Vacinas",
+    },
   ]
 
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -204,6 +240,10 @@ export function ClientsSection() {
                       <span>Instagram</span>
                     </a>
                   </Button>
+
+                  <p className="text-sm text-gray-600 mt-2 text-center">
+                    {client.description}
+                  </p>
                 </div>
 
                 <div className="absolute right-2 bg-red-600 text-white text-xs px-2 py-1 rounded-lg shadow">
@@ -239,4 +279,4 @@ export function ClientsSection() {
   </div>
 </section>
   )
-} 
+}

@@ -80,14 +80,17 @@ export function VideoTestimonialsSection() {
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-600 font-medium">
-            Depoimentos em Vídeo
-          </div>
-          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
-            O Que Nossos Clientes Têm a Dizer
-          </h2>
-          <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Veja histórias reais de transformação e resultados com a LSG Digital
-          </p>
+  Depoimentos em Vídeo
+</div>
+
+<h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+  Eles confiaram. Cresceram. E agora contam como foi.
+</h2>
+
+<p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+  Conheça histórias de clientes que transformaram seu marketing em um sistema de vendas previsível com a LSG Digital.
+</p>
+
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 w-full max-w-7xl">
             {testimonials.map((testimonial) => (
