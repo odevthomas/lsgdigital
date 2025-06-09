@@ -1,6 +1,6 @@
 # LSG Digital - Marketing e Performance
 
-![LSG Digital Logo](/public/lsglogo.jpeg)
+![lsgdigital](https://github.com/user-attachments/assets/6475d581-d563-40c4-9234-08d5e0a8751c)
 
 ## 📋 Sobre o Projeto
 
